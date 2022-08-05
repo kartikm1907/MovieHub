@@ -6,7 +6,7 @@ function App() {
     <MovieContextProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/movie" element={<MovieAppMenu />} />
+          <Route path="" element={<MovieAppMenu />} />
         </Routes>
       </BrowserRouter>
     </MovieContextProvider>
