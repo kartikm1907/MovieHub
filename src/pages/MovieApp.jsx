@@ -41,30 +41,15 @@ export default function InputForm() {
       `https://api.tvmaze.com/search/shows`,
       config
     );
-    // console.log(response.data)
     const config1 = { params: { t: location } };
     const res1 = await axios.get(
       `https://www.omdbapi.com/?t=${location}&apikey=80fd038`
     );
-    // console.log(favourites);
     setImdb(res1.data);
     updateMovieList(response.data);
     console.log(movieList);
   };
-  // const addFavs=()=>{
-  //   // console.log(imdb.Title);
-  //   console.log(location);
-  //   console.log(imdb.Title);
-  //   // favs.push(imdb.Title);
-  //   // console.log(favs)
-  //   setFavourites([
-  //     ...favourites,
-  //     imdb.Title
-  //   ]);
-
-  //   console.log(favourites)
-  //   // ctx.addMovie(location);
-  // }
+  
   return (
     <>
       <div className="App">
@@ -94,9 +79,6 @@ export default function InputForm() {
           >
             Search
           </Button>
-          {/* <div>
-            <FavoriteForm name ={location} />
-          </div> */}
         </form>
       </div>
       {req === "" ? (
@@ -120,7 +102,6 @@ export default function InputForm() {
                 <div className="img">
                   <img src={imdb.Poster} alt="" />
                   <FavoriteForm name={location} />
-                  {/* <Button color="success" variant="contained" style={{'margin-top':'10px'}} onClick={addFavs}>Add To Favourites</Button> */}
                 </div>
 
                 <div className="content1">
@@ -183,7 +164,6 @@ export default function InputForm() {
                         <TableCell>{row.show.rating.average}</TableCell>
                         <TableCell>{row.show.language}</TableCell>
                         <TableCell>{row.show.genres}</TableCell>
-                        {/* <Button onClick={()=>{ }}>Add To favourites</Button> */}
                         {row.show.image ? (
                           <img
                             src={row.show.image.medium}

@@ -7,10 +7,8 @@ export default function MovieAppMenu() {
   return (
     <div>
       <FavoritesList />
-      {/* <FavoriteForm /> */}
       <NumberofFavorites />
       <MovieApp />
-      {/* <InputForm/> */}
     </div>
   );
 }
